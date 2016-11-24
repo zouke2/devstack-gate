@@ -519,7 +519,7 @@ function setup_project {
         if git_has_branch $project $branch; then
             git_checkout $project $branch
         else
-            git_checkout $project master
+            git_checkout $project kilo-eol
         fi
     fi
 }
