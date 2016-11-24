@@ -72,7 +72,7 @@ PROJECTS="openstack/tempest-lib $PROJECTS"
 # has to be cloned and updated and checked out to the proper ref
 # which is not free.
 PROJECTS="openstack-infra/tripleo-ci $PROJECTS"
-PROJECTS="openstack/automaton $PROJECTS"
+#PROJECTS="openstack/automaton $PROJECTS"
 PROJECTS="openstack/cliff $PROJECTS"
 PROJECTS="openstack/debtcollector $PROJECTS"
 # The devstack heat plugin uses these repos
