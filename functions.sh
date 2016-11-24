@@ -510,7 +510,8 @@ function setup_project {
     fi
 
     # See if Zuul prepared a ref for this project
-    if $project == "tempest" || $project == "tempest-lib"; then
+    if $project == "tempest" || $project == "tempest-lib" || \
+        $project == "keystoneauth"; then
         git_checkout $project master
     fi
     
