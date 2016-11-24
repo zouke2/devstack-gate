@@ -510,6 +510,10 @@ function setup_project {
     fi
 
     # See if Zuul prepared a ref for this project
+    if $project == "tempest" || $project == "tempest-lib"; then
+        git_checkout $project master
+    fi
+    
     if git_fetch_at_ref $project $OVERRIDE_ZUUL_REF || \
         git_fetch_at_ref $project $FALLBACK_ZUUL_REF; then
 
