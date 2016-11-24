@@ -510,11 +510,6 @@ function setup_project {
     fi
 
     # See if Zuul prepared a ref for this project
-    if $project == "tempest" || $project == "tempest-lib" || \
-        $project == "keystoneauth"; then
-        git_checkout $project master
-    fi
-    
     if git_fetch_at_ref $project $OVERRIDE_ZUUL_REF || \
         git_fetch_at_ref $project $FALLBACK_ZUUL_REF; then
 
@@ -524,7 +519,12 @@ function setup_project {
         if git_has_branch $project $branch; then
             git_checkout $project $branch
         else
+            if $project == "tempest" || $project == "tempest-lib" || \
+                 $project == "keystoneauth"; then
+                 git_checkout $project master
+            else
             git_checkout $project kilo-eol
+            fi
         fi
     fi
 }
