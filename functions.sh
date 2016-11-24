@@ -270,7 +270,7 @@ function git_checkout {
     fi
 
     git checkout $branch
-    git reset --hard $reset_branch
+    #git reset --hard $reset_branch
     if ! git clean -x -f -d -q ; then
         sleep 1
         git clean -x -f -d -q
