@@ -21,7 +21,6 @@
 
 # Most of the work of this script is done in functions so that we may
 # easily redirect their stdout / stderr to log files.
-
 GIT_BASE=${GIT_BASE:-https://git.openstack.org}
 GIT_BRANCH=${GIT_BRANCH:-master}
 
